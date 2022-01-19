@@ -4,6 +4,7 @@ import "intl/locale-data/jsonp/pt-BR";
 import React from "react";
 import AppLoading from "expo-app-loading";
 import { ThemeProvider } from "styled-components";
+import { StatusBar } from "react-native";
 
 import { NavigationContainer } from "@react-navigation/native";
 import { AppRoutes } from "./src/routes/app.routes";
@@ -16,11 +17,6 @@ import {
 } from "@expo-google-fonts/poppins";
 
 import theme from "./src/global/styles/theme";
-// import { Register } from './src/screens/Register';
-// import { TestComponents } from './src/experimentos/TestComponents';
-// import { Formulario } from './src/experimentos/validacaoForm/index';
-// import { FormularioValida } from './src/experimentos/validacaoYup/index';
-
 export default function App() {
   const [fontsLoaded] = useFonts({
     Poppins_400Regular,
@@ -32,15 +28,11 @@ export default function App() {
     return <AppLoading />;
   }
 
-  // <TestComponents/> componente de teste
-
   return (
     <ThemeProvider theme={theme}>
       <NavigationContainer>
+        <StatusBar barStyle="light-content" />
         <AppRoutes />
-        {/* <Register/> */}
-        {/* <Formulario/> */}
-        {/* <FormularioValida/> */}
       </NavigationContainer>
     </ThemeProvider>
   );
