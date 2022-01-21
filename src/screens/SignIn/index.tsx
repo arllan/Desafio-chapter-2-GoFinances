@@ -28,7 +28,9 @@ export function SignIn() {
             Controle suas {"\n"} finanças de forma {"\n"} muito simples
           </Title>
         </TitleWrapper>
-        <SignInTitle>Faça seu login com uma das contas abaixo</SignInTitle>
+        <SignInTitle>
+          Faça seu login com uma das {"\n"} contas abaixo
+        </SignInTitle>
       </Header>
       <Footer>
         <FooterWrapper>
