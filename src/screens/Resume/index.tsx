@@ -24,6 +24,7 @@ import { ptBR } from "date-fns/locale"; // formata no padrao brasileiro
 import { useBottomTabBarHeight } from "@react-navigation/bottom-tabs";
 import { useFocusEffect } from "@react-navigation/core";
 import uuid from "react-native-uuid";
+import { useAuth } from "../../hooks/auth";
 
 interface TransactionData {
   type: "positive" | "negative";
@@ -49,6 +50,8 @@ export function Resume() {
     []
   );
 
+  const { signOut, user } = useAuth();
+
   // funcao de soma mais um mes ao state
   function handleDateChange(action: "next" | "prev") {
     if (action === "next") {
@@ -60,7 +63,7 @@ export function Resume() {
 
   async function loadData() {
     setIsLoading(true);
-    const dataKey = "@gofinances: transactions";
+    const dataKey = `@gofinances:transactions_user${user.id}`;
     const response = await AsyncStorage.getItem(dataKey);
     const responseFormatted = response ? JSON.parse(response!) : [];
     // console.log("@GET", responseFormatted);
