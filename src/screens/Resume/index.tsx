@@ -151,7 +151,6 @@ export function Resume() {
               <MonthSelectButton onPress={() => handleDateChange("prev")}>
                 <MonthSelectIcon name="chevron-left" />
               </MonthSelectButton>
-
               <Month>
                 {format(selectedDate, "MMMM, yyyy", { locale: ptBR })}
               </Month>
