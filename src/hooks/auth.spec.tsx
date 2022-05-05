@@ -16,7 +16,7 @@ describe("validacao do hook de autenticacao", () => {
 
     // result.current.signInWithGoogle();
 
-    // expect(result.current.user).toBeTruthy();
+    expect(result.current.user).toBeTruthy();
 
     expect(true).toEqual(true);
   });
