@@ -105,6 +105,7 @@ function AuthProvider({ children }: AuthProviderProps) {
   }
 
   async function signOut() {
+    console.log("Passou aqui!!!!!");
     setUser({} as User);
     await AsyncStorage.removeItem(useStorageKey);
   }

@@ -63,7 +63,7 @@ export const UserName = styled.Text`
   font-family: ${({ theme }) => theme.fonts.bold};
 `;
 
-export const LogoutButton = styled(BorderlessButton)``;
+export const LogoutButton = styled.TouchableOpacity``;
 
 //forma de utilizar bibliotecas de terceiros
 export const Icon = styled(Feather)`
